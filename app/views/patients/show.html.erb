@@ -1,0 +1,11 @@
+<h2><%= @patient.name %></h2>
+<ul>
+  <% @patient.doctors.uniq.each do |doctor| %>
+    <li>
+      <p><%= doctor.name %></p>
+      <ul>
+        <%= render doctor.appointments_by_patient(@patient) %>
+      </ul>
+    </li>
+  <% end %>
+</ul>

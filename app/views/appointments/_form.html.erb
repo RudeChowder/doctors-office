@@ -1,0 +1,20 @@
+<%= form_for appointment do |form| %>
+  <%= form.label :patient_id %>
+  <%= form.collection_select :patient_id, patients, :id, :name, prompt: true %>
+  <br>
+
+  <%= form.label :doctor_id %>
+  <%= form.collection_select :doctor_id, doctors, :id, :name, prompt: true %>
+  <br>
+
+  <%= form.label :date %>
+  <%= form.datetime_field :date %>
+  <br>
+
+  <%= form.label :notes %>
+  <%= form.text_area :notes %>
+  <br>
+
+  <br>
+  <%= form.submit %>
+<% end %>

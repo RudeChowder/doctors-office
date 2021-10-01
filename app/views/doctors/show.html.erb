@@ -1,0 +1,5 @@
+<h2><%= @doctor.name %></h2>
+<ul>
+  <%= render @patients || "No patients" %>
+  <%# <%= render(partial: "patients/patient", collection: @patients) || "No Patients" %>
+</ul>
